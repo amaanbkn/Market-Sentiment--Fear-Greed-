@@ -11,3 +11,9 @@ The analysis explores how different categories of traders (Whales vs. Retail) re
 Ensure you have Python 3.8+ installed. You will need the following libraries:
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
+
+3. How to Run
+Execute the main submission script to generate the analysis, charts, and processed results:
+
+Bash
+python submission_script.py
