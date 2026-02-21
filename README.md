@@ -15,6 +15,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn
 
 
 🧠 Methodology
+
 Data Cleaning: Standardized IST timestamps to daily dates and handled missing values.
 
 Alignment: Merged trading data with sentiment data using an inner join on the date.
