@@ -7,13 +7,32 @@ The analysis explores how different categories of traders (Whales vs. Retail) re
 
 ## 🚀 Setup & Installation
 
-###  Prerequisites
+### 1. Prerequisites
 Ensure you have Python 3.8+ installed. You will need the following libraries:
-```bash
+
 pip install pandas numpy matplotlib seaborn scikit-learn
 
-3. How to Run
-Execute the main submission script to generate the analysis, charts, and processed results:
 
-Bash
-python submission_script.py
+
+🧠 Methodology
+Data Cleaning: Standardized IST timestamps to daily dates and handled missing values.
+
+Alignment: Merged trading data with sentiment data using an inner join on the date.
+
+Segmentation: Traders were categorized into Whale (Top 25% by daily volume) and Retail to compare behavioral archetypes.
+
+Strategy Testing: Implemented a logic-based "Strategy Signal" column to evaluate hypothetical risk-mitigation rules.
+
+📈 Key Insights
+Retail Vulnerability: Retail traders show a significant drop in PnL during "Extreme Fear," often indicating panic-selling behavior.
+
+Whale Stability: Whale accounts maintain higher win rates during high-volatility "Fear" periods, suggesting they provide liquidity to the market.
+
+FOMO Effect: Trading frequency for retail accounts spikes during "Extreme Greed," usually coinciding with sub-optimal entry prices.
+
+🛠️ Strategy Recommendations (Rules of Thumb)
+Rule 1 (The Defense): Reduce position sizes for Retail-tier accounts by 50% when the Fear & Greed Index is below 20.
+
+Rule 2 (The Follower): In "Greed" regimes, only enter Long positions if the Whale segment's side-bias is positive (Buy Ratio > 0.5).
+
+
